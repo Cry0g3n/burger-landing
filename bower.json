@@ -1,0 +1,23 @@
+{
+  "name": "burger-landing",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Andrew <andrey.shemiakov@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+
+  },
+  "dependencies": {
+    "normalize-css": "^5.0.0"
+  }
+}
