@@ -1,9 +1,9 @@
-$(document).ready(function() {
+$(document).ready(function () {
     $('#fullpage').fullpage({
         //Navigation
         menu: '#menu',
         lockAnchors: false,
-        anchors:['firstPage', 'secondPage'],
+        anchors: ['firstPage', 'secondPage'],
         navigation: false,
         navigationPosition: 'right',
         navigationTooltips: ['firstSlide', 'secondSlide'],
@@ -44,7 +44,7 @@ $(document).ready(function() {
         //Design
         controlArrows: true,
         verticalCentered: false,
-        sectionsColor : ['#ccc', '#fff'],
+        sectionsColor: ['#ccc', '#fff'],
         paddingTop: '3em',
         paddingBottom: '10px',
         fixedElements: '#header, .footer',
@@ -57,12 +57,58 @@ $(document).ready(function() {
         slideSelector: '.slide',
 
         //events
-        onLeave: function(index, nextIndex, direction){},
-        afterLoad: function(anchorLink, index){},
-        afterRender: function(){},
-        afterResize: function(){},
-        afterResponsive: function(isResponsive){},
-        afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
-        onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
+        onLeave: function (index, nextIndex, direction) {
+        },
+        afterLoad: function (anchorLink, index) {
+        },
+        afterRender: function () {
+        },
+        afterResize: function () {
+        },
+        afterResponsive: function (isResponsive) {
+        },
+        afterSlideLoad: function (anchorLink, index, slideAnchor, slideIndex) {
+        },
+        onSlideLeave: function (anchorLink, index, slideIndex, direction, nextSlideIndex) {
+        }
     });
+
+    var owl = $('.owl-carousel').owlCarousel({
+        items: 1,
+        loop: true,
+        nav: true,
+        navContainer: $('.burger-slider__controls'),
+        navText: ['', '']
+    });
+
+    $('.burger-slider__btn_next').on('click', function (e) {
+        e.preventDefault();
+        owl.trigger('next.owl.carousel');
+    });
+
+    $('.burger-slider__btn_prev').on('click', function (e) {
+        e.preventDefault();
+        owl.trigger('prev.owl.carousel');
+    })
 });
+
+// $(document).ready(function () {
+//     var owl = $('.owl-carousel').owlCarousel({
+//         items: 1,
+//         loop: true,
+//         nav: true,
+//         navContainer: $('.burger-slider__controls'),
+//         navText: ['', ''],
+//         navElement: 'a'
+//     });
+//
+//     $('.burger-slider__btn_next').on('click', function(e) {
+//         e.preventDefault();
+//         owl.trigger('next.owl.carousel');
+//     });
+//
+//     $('.burger-slider__btn_prev').click(function(e) {
+//         e.preventDefault();
+//         owl.trigger('prev.owl.carousel');
+//     })
+// });

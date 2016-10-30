@@ -6,7 +6,7 @@
     "Andrew <andrey.shemiakov@gmail.com>"
   ],
   "license": "ISC",
-  "homepage": "",
+  "homepage": "https://github.com/Cry0g3n/burger-landing",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -14,10 +14,11 @@
     "test",
     "tests"
   ],
-  "devDependencies": {
-
-  },
+  "devDependencies": {},
   "dependencies": {
+    "fullpage.js": "^2.8.8",
+    "owl.carousel": "^2.2.0",
     "normalize-css": "^5.0.0"
-  }
+  },
+  "private": true
 }
