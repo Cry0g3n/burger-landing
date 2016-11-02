@@ -90,4 +90,82 @@ $(document).ready(function () {
         e.preventDefault();
         owl.trigger('prev.owl.carousel');
     })
+
+    //horizontal accordion
+    $(function(){
+        $('.menu-acco__trigger').on('click', function(e){
+            e.preventDefault();
+
+            var $this = $(this),
+                container = $this.closest('.menu-acco'),
+                item = $this.closest('.menu-acco__item'),
+                items = container.find('.menu-acco__item'),
+                activeItem = items.filter('.active'),
+                content = item.find('.menu-acco__content'),
+                activeContent = activeItem.find('.menu-acco__content');
+
+            if (!item.hasClass('active')) {
+
+                items.removeClass('active');
+                item.addClass('active');
+
+                activeContent.animate({
+                    'width' : '0px'
+                });
+
+                content.animate({
+                    'width' : '550px'
+                });
+
+            } else {
+
+                item.removeClass('active');
+                content.animate({
+                    'width' : '0px'
+                });
+
+            }
+        });
+
+        // клик вне аккордеона
+        $(document).on('click', function (e) {
+            var $this = $(e.target);
+
+            if (!$this.closest('.menu-acco').length) {
+                $('.menu-acco__content').animate({
+                    'width' : '0px'
+                });
+
+                $('.menu-acco__item').removeClass('active');
+            }
+        });
+    });
+
+    //accordion
+    $(function () {
+        $('.team-acco__trigger').on('click', function(e){
+            e.preventDefault();
+
+            var $this = $(this),
+                item = $this.closest('.team-acco__item'),
+                container = $this.closest('.team-acco'),
+                items = container.find('.team-acco__item'),
+                content = item.find('.team-acco__content'),
+                otherContent = container.find('.team-acco__content');
+
+            if (!item.hasClass('active')) {
+
+                items.removeClass('active');
+                item.addClass('active');
+                otherContent.slideUp();
+                content.slideDown();
+
+            } else {
+
+                item.removeClass('active');
+                content.slideUp();
+
+            }
+        });
+    });
 });
