@@ -91,24 +91,3 @@ $(document).ready(function () {
         owl.trigger('prev.owl.carousel');
     })
 });
-
-// $(document).ready(function () {
-//     var owl = $('.owl-carousel').owlCarousel({
-//         items: 1,
-//         loop: true,
-//         nav: true,
-//         navContainer: $('.burger-slider__controls'),
-//         navText: ['', ''],
-//         navElement: 'a'
-//     });
-//
-//     $('.burger-slider__btn_next').on('click', function(e) {
-//         e.preventDefault();
-//         owl.trigger('next.owl.carousel');
-//     });
-//
-//     $('.burger-slider__btn_prev').click(function(e) {
-//         e.preventDefault();
-//         owl.trigger('prev.owl.carousel');
-//     })
-// });
