@@ -153,18 +153,14 @@ $(document).ready(function () {
                 content = item.find('.team-acco__content'),
                 otherContent = container.find('.team-acco__content');
 
-            if (!item.hasClass('active')) {
-
-                items.removeClass('active');
-                item.addClass('active');
+            if (!item.hasClass('team-acco__item_active')) {
+                items.removeClass('team-acco__item_active');
+                item.addClass('team-acco__item_active');
                 otherContent.slideUp();
                 content.slideDown();
-
             } else {
-
-                item.removeClass('active');
+                item.removeClass('team-acco__item_active');
                 content.slideUp();
-
             }
         });
     });
