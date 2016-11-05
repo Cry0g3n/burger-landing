@@ -39,16 +39,17 @@
   }
 }
 
-.team-acco__item_active {
-  .team-acco__content {
-    display: block;
-  }
+.team-acco__item {
+  margin-bottom: 40px;
 
-  .team-acco__trigger {
-    color: $yellow;
+  &_active {
 
-    &:before {
-      transform: rotate(-180deg);
+    .team-acco__trigger {
+      color: $yellow;
+
+      &:before {
+        transform: rotate(-180deg);
+      }
     }
   }
 }
