@@ -39,6 +39,7 @@
 .best__item {
   @include inlineblock();
   width: 33.3%;
+  padding: 0 5px;
 }
 
 .best__title {
