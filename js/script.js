@@ -54,23 +54,7 @@ $(document).ready(function () {
 
         //Custom selectors
         sectionSelector: '.section',
-        slideSelector: '.slide',
-
-        //events
-        onLeave: function (index, nextIndex, direction) {
-        },
-        afterLoad: function (anchorLink, index) {
-        },
-        afterRender: function () {
-        },
-        afterResize: function () {
-        },
-        afterResponsive: function (isResponsive) {
-        },
-        afterSlideLoad: function (anchorLink, index, slideAnchor, slideIndex) {
-        },
-        onSlideLeave: function (anchorLink, index, slideIndex, direction, nextSlideIndex) {
-        }
+        slideSelector: '.slide'
     });
 
     var owl = $('.owl-carousel').owlCarousel({
@@ -92,8 +76,8 @@ $(document).ready(function () {
     })
 
     //horizontal accordion
-    $(function(){
-        $('.menu-acco__trigger').on('click', function(e){
+    $(function () {
+        $('.menu-acco__trigger').on('click', function (e) {
             e.preventDefault();
 
             var $this = $(this),
@@ -110,18 +94,18 @@ $(document).ready(function () {
                 item.addClass('active');
 
                 activeContent.animate({
-                    'width' : '0px'
+                    'width': '0px'
                 });
 
                 content.animate({
-                    'width' : '550px'
+                    'width': '550px'
                 });
 
             } else {
 
                 item.removeClass('active');
                 content.animate({
-                    'width' : '0px'
+                    'width': '0px'
                 });
 
             }
@@ -133,7 +117,7 @@ $(document).ready(function () {
 
             if (!$this.closest('.menu-acco').length) {
                 $('.menu-acco__content').animate({
-                    'width' : '0px'
+                    'width': '0px'
                 });
 
                 $('.menu-acco__item').removeClass('active');
@@ -143,7 +127,7 @@ $(document).ready(function () {
 
     //accordion
     $(function () {
-        $('.team-acco__trigger').on('click', function(e){
+        $('.team-acco__trigger').on('click', function (e) {
             e.preventDefault();
 
             var $this = $(this),
@@ -169,21 +153,72 @@ $(document).ready(function () {
     $(function () {
         $('.review__view').fancybox({
             type: 'inline',
-            maxWidth : 460,
-            fitToView : false,
-            padding : 0,
-            openEffect  : 'elastic',
+            maxWidth: 460,
+            fitToView: false,
+            padding: 0,
+            openEffect: 'elastic',
             closeBtn: false
         });
 
-        $('.full-review__close').on('click', function(e){
+        $('.full-review__close').on('click', function (e) {
             e.preventDefault();
             $.fancybox.close();
         });
     });
 
     //input mask
-    $(function(){
+    $(function () {
         $('.phone-mask').inputmask('+7 (999) 999 99 99');
     });
+
+    $(function () {
+        $('order-form').on('submit', function (e) {
+            e.preventDefault();
+
+            var form = $(this),
+                formData = form.serialize();
+
+            $.ajax({
+                url: '',
+                type: 'POST',
+                data: formData,
+                success: function (data) {
+
+                }
+            })
+        })
+    })
+});
+
+// Yandex map
+$(function () {
+    ymaps.ready(init);
+    var myMap;
+
+    function init() {
+        myMap = new ymaps.Map("map", {
+            center: [57.623207465831555, 39.88794993824088],
+            zoom: 12,
+            controls: []
+        });
+
+        myMap.behaviors.disable('scrollZoom');
+
+        var coords = [
+                [57.62632722025241, 39.890100369401274],
+                [57.68739741981051, 39.78825764650293]
+            ],
+            myCollection = new ymaps.GeoObjectCollection({}, {
+                iconLayout: 'default#image',
+                iconImageHref: './img/icons/map-marker.svg',
+                iconImageSize: [46, 57],
+                iconImageOffset: [-26, -52]
+            });
+
+        for (var i = 0; i < coords.length; i++) {
+            myCollection.add(new ymaps.Placemark(coords[i]));
+        }
+
+        myMap.geoObjects.add(myCollection);
+    }
 });
