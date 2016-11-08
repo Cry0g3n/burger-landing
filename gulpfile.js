@@ -59,11 +59,11 @@ gulp.task('dev', ['build', 'watch', 'browser-sync']);
 gulp.task('build', ['html', 'styles', 'scripts', 'assets', 'fonts']);
 // Задача 'watch' следит за всеми нашими файлами в проекте и при изменении тех или иных перезапустает соответсвующую задачу.
 gulp.task('watch', function() {
-    gulp.watch('src/styles/**/*.scss', ['styles']); //стили
-    gulp.watch('src/js/**/*.js', ['scripts']); //скрипты
+    gulp.watch('./src/sass/**/*.scss', ['styles']); //стили
+    gulp.watch('./src/js/**/*.js', ['scripts']); //скрипты
     gulp.watch(['./bower.json', 'src/index.html'], ['html']); // html
     gulp.watch('./src/assets/**/*.*', ['assets']); //наши локальные файлы(картинки, шрифты)
-    gulp.watch('src/**/*.*').on('change', browserSync.reload()); //Перезапуск browserSynс
+    gulp.watch('./src/**/*.*').on('change', browserSync.reload); //Перезапуск browserSynс
 });
 // Задача 'styles' выполняет сборку наших стилей.
 gulp.task('styles', function() {

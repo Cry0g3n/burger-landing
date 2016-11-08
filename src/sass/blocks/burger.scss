@@ -130,12 +130,13 @@
 
 .ingredients__table-cell {
   vertical-align: middle;
+  text-align: center;
   padding: 8px 0;
 }
 
 .burger-weight {
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
   left: 0;
   opacity: .5;
 }
@@ -204,4 +205,8 @@
   img {
     transform: rotate(90deg);
   }
+}
+
+.ingredients__table-icon {
+  width: 45px;
 }
