@@ -5,11 +5,13 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" type="text/css" href="bower_components/fullpage.js/jquery.fullPage.css"/>
-    <link rel="stylesheet" href="bower_components/owl.carousel/dist/assets/owl.carousel.min.css"/>
-    <link rel="stylesheet" href="bower_components/fancybox/source/jquery.fancybox.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="styles/build.css">
+
+    <!-- build:css css/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
     <title>Burgers</title>
 </head>
 <body>
@@ -20,7 +22,7 @@
                 <header class="header">
                     <div class="container">
                         <div class="header__logo"><a class="logo" href="#">
-                            <img src="img/icons/logo.svg" alt="">
+                            <img src="assets/img/icons/logo.svg" alt="">
                         </a></div>
                         <div class="header__menu">
                             <nav class="nav">
@@ -46,7 +48,7 @@
                 <div class="hero__container">
                     <div class="container">
                         <div class="hero__content">
-                            <div class="hero__left"><img class="hero__img" src="./img/content/burger.png" alt=""></div>
+                            <div class="hero__left"><img class="hero__img" src="assets/img/content/burger.png" alt=""></div>
                             <div class="hero__right">
                                 <div class="section__title">Мы делаем</div>
                                 <div class="hero__desc">Натуральные бургеры</div>
@@ -63,7 +65,7 @@
                     <li class="best__item">
                         <div class="best__icon">
                             <div class="best__icon-pic">
-                                <img src="img/icons/meat.svg" alt="">
+                                <img src="assets/img/icons/meat.svg" alt="">
                             </div>
                         </div>
                         <div class="best__title">100% свежее мясо</div>
@@ -75,7 +77,7 @@
                     <li class="best__item">
                         <div class="best__icon">
                             <div class="best__icon-pic">
-                                <img src="img/icons/hand.svg" alt="">
+                                <img src="assets/img/icons/hand.svg" alt="">
                             </div>
                         </div>
                         <div class="best__title">Ручная сборка</div>
@@ -87,7 +89,7 @@
                     <li class="best__item">
                         <div class="best__icon">
                             <div class="best__icon-pic">
-                                <img src="img/icons/natural.svg" alt="">
+                                <img src="assets/img/icons/natural.svg" alt="">
                             </div>
                         </div>
                         <div class="best__title">Натуральные ингредиенты</div>
@@ -105,10 +107,10 @@
                     <div class="burger-slider-wrap">
                         <div class="burger-slider__controls">
                             <a class="burger-slider__btn burger-slider__btn_next" href="#">
-                                <img src="img/icons/arrow-scroll.svg" alt="">
+                                <img src="assets/img/icons/arrow-scroll.svg" alt="">
                             </a>
                             <a class="burger-slider__btn burger-slider__btn_prev" href="#">
-                                <img src="img/icons/arrow-scroll.svg" alt="">
+                                <img src="assets/img/icons/arrow-scroll.svg" alt="">
                             </a>
                         </div>
                         <ul class="burgers-slider owl-carousel owl-theme">
@@ -116,7 +118,7 @@
                                 <div class="ingredients">
                                     <div class="ingredients__icon">
                                         <div class="ingredients__icon-pic">
-                                            <img src="img/icons/burger.svg" alt="">
+                                            <img src="assets/img/icons/burger.svg" alt="">
                                         </div>
                                         <div class="ingredients__icon-text">Состав</div>
                                     </div>
@@ -125,7 +127,7 @@
                                             <tr class="ingredients__table-row">
                                                 <td class="ingredients__table-cell">
                                                     <div class="ingredients__table-icon">
-                                                        <img src="img/icons/beef.svg" alt="">
+                                                        <img src="assets/img/icons/beef.svg" alt="">
                                                     </div>
                                                 </td>
                                                 <td class="ingredients__table-cell">
@@ -138,7 +140,7 @@
                                             <tr class="ingredients__table-row">
                                                 <td class="ingredients__table-cell">
                                                     <div class="ingredients__table-icon">
-                                                        <img src="img/icons/buns.svg" alt="">
+                                                        <img src="assets/img/icons/buns.svg" alt="">
                                                     </div>
                                                 </td>
                                                 <td class="ingredients__table-cell">
@@ -151,7 +153,7 @@
                                             <tr class="ingredients__table-row">
                                                 <td class="ingredients__table-cell">
                                                     <div class="ingredients__table-icon">
-                                                        <img src="img/icons/salad.svg" alt="">
+                                                        <img src="assets/img/icons/salad.svg" alt="">
                                                     </div>
                                                 </td>
                                                 <td class="ingredients__table-cell">
@@ -164,7 +166,7 @@
                                             <tr class="ingredients__table-row">
                                                 <td class="ingredients__table-cell">
                                                     <div class="ingredients__table-icon">
-                                                        <img src="img/icons/sauce.svg" alt="">
+                                                        <img src="assets/img/icons/sauce.svg" alt="">
                                                     </div>
                                                 </td>
                                                 <td class="ingredients__table-cell">
@@ -177,7 +179,7 @@
                                             <tr class="ingredients__table-row">
                                                 <td class="ingredients__table-cell">
                                                     <div class="ingredients__table-icon">
-                                                        <img src="img/icons/cucumber.svg" alt="">
+                                                        <img src="assets/img/icons/cucumber.svg" alt="">
                                                     </div>
                                                 </td>
                                                 <td class="ingredients__table-cell">
@@ -189,7 +191,7 @@
                                             </tr>
                                             <tr class="ingredients__table-row">
                                                 <td class="ingredients__table-cell">
-                                                    <img src="img/icons/cheese.svg" alt="">
+                                                    <img src="assets/img/icons/cheese.svg" alt="">
                                                 </td>
                                                 <td class="ingredients__table-cell">
                                                     <div class="ingredients__table-icon">Сыр</div>
@@ -208,7 +210,7 @@
                                     <div class="burger-weight__title">ккал</div>
                                 </div>
                                 <div class="burgers-slider__left"><img class="burgers-slider__pic"
-                                                                       src="./img/content/black-burger.png" alt="">
+                                                                       src="assets/img/content/black-burger.png" alt="">
                                 </div>
                                 <div class="burgers-slider__right">
                                     <div class="section__title section__title_white">Dark Beef Burger</div>
@@ -229,7 +231,7 @@
                                 <div class="ingredients">
                                     <div class="ingredients__icon">
                                         <div class="ingredients__icon-pic">
-                                            <img src="img/icons/burger.svg" alt="">
+                                            <img src="assets/img/icons/burger.svg" alt="">
                                         </div>
                                         <div class="ingredients__icon-text">Состав</div>
                                     </div>
@@ -238,7 +240,7 @@
                                             <tr class="ingredients__table-row">
                                                 <td class="ingredients__table-cell">
                                                     <div class="ingredients__table-icon">
-                                                        <img src="img/icons/beef.svg" alt="">
+                                                        <img src="assets/img/icons/beef.svg" alt="">
                                                     </div>
                                                 </td>
                                                 <td class="ingredients__table-cell">
@@ -251,7 +253,7 @@
                                             <tr class="ingredients__table-row">
                                                 <td class="ingredients__table-cell">
                                                     <div class="ingredients__table-icon">
-                                                        <img src="img/icons/buns.svg" alt="">
+                                                        <img src="assets/img/icons/buns.svg" alt="">
                                                     </div>
                                                 </td>
                                                 <td class="ingredients__table-cell">
@@ -264,7 +266,7 @@
                                             <tr class="ingredients__table-row">
                                                 <td class="ingredients__table-cell">
                                                     <div class="ingredients__table-icon">
-                                                        <img src="img/icons/salad.svg" alt="">
+                                                        <img src="assets/img/icons/salad.svg" alt="">
                                                     </div>
                                                 </td>
                                                 <td class="ingredients__table-cell">
@@ -277,7 +279,7 @@
                                             <tr class="ingredients__table-row">
                                                 <td class="ingredients__table-cell">
                                                     <div class="ingredients__table-icon">
-                                                        <img src="img/icons/sauce.svg" alt="">
+                                                        <img src="assets/img/icons/sauce.svg" alt="">
                                                     </div>
                                                 </td>
                                                 <td class="ingredients__table-cell">
@@ -290,7 +292,7 @@
                                             <tr class="ingredients__table-row">
                                                 <td class="ingredients__table-cell">
                                                     <div class="ingredients__table-icon">
-                                                        <img src="img/icons/cucumber.svg" alt="">
+                                                        <img src="assets/img/icons/cucumber.svg" alt="">
                                                     </div>
                                                 </td>
                                                 <td class="ingredients__table-cell">
@@ -302,7 +304,7 @@
                                             </tr>
                                             <tr class="ingredients__table-row">
                                                 <td class="ingredients__table-cell">
-                                                    <img src="img/icons/cheese.svg" alt="">
+                                                    <img src="assets/img/icons/cheese.svg" alt="">
                                                 </td>
                                                 <td class="ingredients__table-cell">
                                                     <div class="ingredients__table-icon">Сыр</div>
@@ -321,7 +323,7 @@
                                     <div class="burger-weight__title">ккал</div>
                                 </div>
                                 <div class="burgers-slider__left"><img class="burgers-slider__pic"
-                                                                       src="./img/content/black-burger.png" alt="">
+                                                                       src="assets/img/content/black-burger.png" alt="">
                                 </div>
                                 <div class="burgers-slider__right">
                                     <div class="section__title section__title_white">Dark Beef Burger</div>
@@ -353,7 +355,7 @@
                         <div class="team-acco__content">
                             <div class="team-acco__pic">
                                 <div class="team-acco__img"
-                                     style="background-image: url('./img/content/teammate.jpg')"></div>
+                                     style="background-image: url('assets/img/content/teammate.jpg')"></div>
                             </div>
                             <div class="team-acco__text">
                                 <div class="team-acco__title">Шеф-повар</div>
@@ -368,7 +370,7 @@
                         <div class="team-acco__content">
                             <div class="team-acco__pic">
                                 <div class="team-acco__img"
-                                     style="background-image: url('./img/content/teammate.jpg')"></div>
+                                     style="background-image: url('assets/img/content/teammate.jpg')"></div>
                             </div>
                             <div class="team-acco__text">
                                 <div class="team-acco__title">Шеф-повар</div>
@@ -383,7 +385,7 @@
                         <div class="team-acco__content">
                             <div class="team-acco__pic">
                                 <div class="team-acco__img"
-                                     style="background-image: url('./img/content/teammate.jpg')"></div>
+                                     style="background-image: url('assets/img/content/teammate.jpg')"></div>
                             </div>
                             <div class="team-acco__text">
                                 <div class="team-acco__title">Шеф-повар</div>
@@ -398,7 +400,7 @@
                         <div class="team-acco__content">
                             <div class="team-acco__pic">
                                 <div class="team-acco__img"
-                                     style="background-image: url('./img/content/teammate.jpg')"></div>
+                                     style="background-image: url('assets/img/content/teammate.jpg')"></div>
                             </div>
                             <div class="team-acco__text">
                                 <div class="team-acco__title">Шеф-повар</div>
@@ -415,7 +417,7 @@
             <div class="section__title section__title_white menu__title">Меню</div>
             <ul class="menu-acco">
                 <li class="menu-acco__item menu-acco__item_active">
-                    <a href="#" class="menu-acco__trigger" style="background-image: url('./img/bg/menu/meats.jpg')">
+                    <a href="#" class="menu-acco__trigger" style="background-image: url('assets/img/bg/menu/meats.jpg')">
                         <span class="menu-acco__trigger-text">
                             Для мясоедов
                         </span>
@@ -435,7 +437,7 @@
                     </div>
                 </li>
                 <li class="menu-acco__item">
-                    <a href="#" class="menu-acco__trigger" style="background-image: url('./img/bg/menu/vegans.jpg')">
+                    <a href="#" class="menu-acco__trigger" style="background-image: url('assets/img/bg/menu/vegans.jpg')">
                         <span class="menu-acco__trigger-text">
                             Вегетарианское
                         </span>
@@ -454,7 +456,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="menu-acco__item" style="background-image: url('./img/bg/menu/diets.jpg')">
+                <li class="menu-acco__item" style="background-image: url('assets/img/bg/menu/diets.jpg')">
                     <a href="#" class="menu-acco__trigger">
                         <span class="menu-acco__trigger-text">
                             Диетическое
@@ -480,7 +482,7 @@
             <ul class="reviews__list">
                 <li class="reviews__item">
                     <div class="review">
-                        <div class="review__pic" style="background-image: url('img/content/reviews/1.jpg')">
+                        <div class="review__pic" style="background-image: url('assets/img/content/reviews/1.jpg')">
                         </div>
                         <div class="review__hover">
                             <div class="review__title">Константин Спилберг</div>
@@ -495,7 +497,7 @@
                 </li>
                 <li class="reviews__item">
                     <div class="review">
-                        <div class="review__pic" style="background-image: url('img/content/reviews/2.jpg')">
+                        <div class="review__pic" style="background-image: url('assets/img/content/reviews/2.jpg')">
                         </div>
                         <div class="review__hover">
                             <div class="review__title">Константин Спилберг</div>
@@ -510,7 +512,7 @@
                 </li>
                 <li class="reviews__item">
                     <div class="review">
-                        <div class="review__pic" style="background-image: url('img/content/reviews/3.jpg')">
+                        <div class="review__pic" style="background-image: url('assets/img/content/reviews/3.jpg')">
                         </div>
                         <div class="review__hover">
                             <div class="review__title">Константин Спилберг</div>
@@ -525,7 +527,7 @@
                 </li>
                 <li class="reviews__item">
                     <div class="review">
-                        <div class="review__pic" style="background-image: url('img/content/reviews/4.jpg')">
+                        <div class="review__pic" style="background-image: url('assets/img/content/reviews/4.jpg')">
                         </div>
                         <div class="review__hover">
                             <div class="review__title">Константин Спилберг</div>
@@ -540,7 +542,7 @@
                 </li>
                 <li class="reviews__item">
                     <div class="review">
-                        <div class="review__pic" style="background-image: url('img/content/reviews/5.jpg')">
+                        <div class="review__pic" style="background-image: url('assets/img/content/reviews/5.jpg')">
                         </div>
                         <div class="review__hover">
                             <div class="review__title">Константин Спилберг</div>
@@ -555,7 +557,7 @@
                 </li>
                 <li class="reviews__item">
                     <div class="review">
-                        <div class="review__pic" style="background-image: url('img/content/reviews/6.jpg')">
+                        <div class="review__pic" style="background-image: url('assets/img/content/reviews/6.jpg')">
                         </div>
                         <div class="review__hover">
                             <div class="review__title">Константин Спилберг</div>
@@ -570,7 +572,7 @@
                 </li>
                 <li class="reviews__item">
                     <div class="review">
-                        <div class="review__pic" style="background-image: url('img/content/reviews/7.jpg')">
+                        <div class="review__pic" style="background-image: url('assets/img/content/reviews/7.jpg')">
                         </div>
                         <div class="review__hover">
                             <div class="review__title">Константин Спилберг</div>
@@ -585,7 +587,7 @@
                 </li>
                 <li class="reviews__item">
                     <div class="review">
-                        <div class="review__pic" style="background-image: url('img/content/reviews/8.jpg')">
+                        <div class="review__pic" style="background-image: url('assets/img/content/reviews/8.jpg')">
                         </div>
                         <div class="review__hover">
                             <div class="review__title">Константин Спилберг</div>
@@ -692,22 +694,22 @@
                         <ul class="socials">
                             <li class="socials__item">
                                 <a class="socials__link" href="#">
-                                    <img src="img/icons/vk.svg" alt="">
+                                    <img src="assets/img/icons/vk.svg" alt="">
                                 </a>
                             </li>
                             <li class="socials__item">
                                 <a class="socials__link" href="#">
-                                    <img src="img/icons/fb.svg" alt="">
+                                    <img src="assets/img/icons/fb.svg" alt="">
                                 </a>
                             </li>
                             <li class="socials__item">
                                 <a class="socials__link" href="#">
-                                    <img src="img/icons/inst.svg" alt="">
+                                    <img src="assets/img/icons/inst.svg" alt="">
                                 </a>
                             </li>
                             <li class="socials__item">
                                 <a class="socials__link" href="#">
-                                    <img src="img/icons/twitter.svg" alt="">
+                                    <img src="assets/img/icons/twitter.svg" alt="">
                                 </a>
                             </li>
                         </ul>
@@ -727,7 +729,7 @@
     <li data-menuanchor="6" class="fixed-menu__item"><a class="fixed-menu__link" href="#6"></a></li>
     <li data-menuanchor="7" class="fixed-menu__item"><a class="fixed-menu__link" href="#7"></a></li>
 </ul>
-<div class="full-review popup" id="full-review"><a class="full-review__close" href="#"><img src="img/icons/close.svg"
+<div class="full-review popup" id="full-review"><a class="full-review__close" href="#"><img src="assets/img/icons/close.svg"
                                                                                             alt=""></a>
     <div class="full-review__inner">
         <div class="full-review__title">Константин Спилберг</div>
@@ -739,12 +741,15 @@
         </div>
     </div>
 </div>
-<script src="bower_components/jquery/dist/jquery.min.js"></script>
-<script src="bower_components/fullpage.js/jquery.fullPage.min.js"></script>
-<script src="bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
-<script src="bower_components/fancybox/source/jquery.fancybox.pack.js"></script>
-<script src="bower_components/jquery.inputmask/dist/jquery.inputmask.bundle.js"></script>
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-<script type="text/javascript" src="js/script.js"></script>
+
+<!-- build:js js/vendor.js -->
+<!-- bower:js -->
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:js js/scripts.min.js -->
+<script src="js/script.js"></script>
+<!-- endbuild -->
 </body>
 </html>

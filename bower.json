@@ -22,5 +22,13 @@
     "fancybox": "^2.1.5",
     "jquery.inputmask": "^3.3.3"
   },
+  "overrides": {
+    "fancybox": {
+      "main": ["source/jquery.fancybox.css", "source/jquery.fancybox.pack.js"]
+    },
+    "jquery.inputmask": {
+      "main": ["dist/jquery.inputmask.bundle.js"]
+    }
+  },
   "private": true
 }
