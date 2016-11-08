@@ -2,31 +2,6 @@
 
 var gulp = require('gulp');
 var sass = require('gulp-sass');
-var stripCssComments = require('gulp-strip-css-comments');
-var cssbeautify = require('gulp-cssbeautify');
-var sourcemaps = require('gulp-sourcemaps');
-var autoprefixer = require('gulp-autoprefixer');
-
-gulp.task('sass', function () {
-    gulp.src('./src/sass/**/main.scss')
-        .pipe(sourcemaps.init())
-        .pipe(sass().on('error', sass.logError))
-        .pipe(stripCssComments())
-        .pipe(autoprefixer({
-            browsers: ['last 2 versions', 'Firefox ESR'],
-            cascade: false
-        }))
-        .pipe(cssbeautify())
-        .pipe(sourcemaps.write('/'))
-        .pipe(gulp.dest('./css'));
-});
-
-gulp.task('sass:watch', function () {
-    gulp.watch('./src/sass/**/*.scss', ['sass']);
-});
-
-var gulp = require('gulp');
-var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var concat = require('gulp-concat');
 var cssnano = require('gulp-cssnano');
@@ -40,7 +15,6 @@ var uglify = require('gulp-uglify');
 var wiredep = require('gulp-wiredep');
 var useref = require('gulp-useref');
 var browserSync = require('browser-sync').create();
-
 // Задача с названием 'default' запускается автоматически по команде 'gulp' в консоле.
 // Эта конструкция работает синхронно, сначала выполняется задача 'clean' и только после ее завершнения запускается 'dev'.
 gulp.task('default', ['clean'], function() {
@@ -56,12 +30,13 @@ gulp.task('production', ['clean'], function() {
 gulp.task('dev', ['build', 'watch', 'browser-sync']);
 // Задача 'build' представляет собой сборку в режиме продакшен.
 // Собирает проект.
-gulp.task('build', ['html', 'styles', 'scripts', 'assets', 'fonts']);
+gulp.task('build', ['html', 'styles', 'scripts', 'assets', 'fonts', 'php']);
 // Задача 'watch' следит за всеми нашими файлами в проекте и при изменении тех или иных перезапустает соответсвующую задачу.
 gulp.task('watch', function() {
     gulp.watch('./src/sass/**/*.scss', ['styles']); //стили
     gulp.watch('./src/js/**/*.js', ['scripts']); //скрипты
     gulp.watch(['./bower.json', 'src/index.html'], ['html']); // html
+    gulp.watch('./src/*.php', ['php']); //скрипты
     gulp.watch('./src/assets/**/*.*', ['assets']); //наши локальные файлы(картинки, шрифты)
     gulp.watch('./src/**/*.*').on('change', browserSync.reload); //Перезапуск browserSynс
 });
@@ -120,9 +95,10 @@ gulp.task('browser-sync', function() {
     return browserSync.init({
         server: {
             baseDir: './build/'
-        }
+        },
     });
 });
+
 //Перемешение наших локальных файлов в папку build
 gulp.task('assets', function() {
     return gulp.src('./src/assets/**/*.*')
@@ -133,4 +109,9 @@ gulp.task('assets', function() {
 gulp.task('fonts', function() {
     return gulp.src('./src/fonts/**/*.*')
         .pipe(gulp.dest('./build/fonts'));
+});
+
+gulp.task('php', function() {
+    gulp.src('src/*.php')
+        .pipe(gulp.dest('build/'));
 });
